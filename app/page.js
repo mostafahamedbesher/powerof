@@ -1,113 +1,438 @@
 import Image from "next/image";
+import SectionContainer from "./components/SectionContainer";
+import HeadingSection from "./components/HeadingSection";
+import DescriptionTxt from "./components/DescriptionTxt";
+import ImageShapeBox from "./components/ImageShapeBox";
+import FooterSection from "./components/FooterSection";
+import ServiceItem from "./components/ServiceItem";
+import ImageServices from "./components/ImageServices";
+import TextBoxService from "./components/TextBoxService";
+import ProductsList from "./components/ProductsList";
+import CompanyNameHeading from "./components/CompanyNameHeading";
 
-export default function Home() {
+import { LuPhoneCall } from "react-icons/lu";
+import { IoLocationOutline } from "react-icons/io5";
+import { CiGlobe } from "react-icons/ci";
+
+function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <SectionContainer>
+        <div className="relative h-[100dvh] object-cover">
+          <Image src="/images/home.jpg" fill alt="home page picture" />
         </div>
-      </div>
+      </SectionContainer>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* section About */}
+      <SectionContainer>
+        {/* <ImageShapeBox /> */}
+        <HeadingSection txtDir="rtl" type="primary">
+          من نحن :
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="primary">
+          تأسست <span className="text-red-500">قوة الإطفاء</span> في جدة -
+          المملكة العربية السعودية، وهي من بين الشركات الرائدة في المملكة
+          العربية السعودية التي تقدم خدمات ومنتجات أنظمة الحماية من الحرائق
+          وأجهزة إنذار الحريق ومعدات مكافحة الحرائق وأنظمة هندسة الأمن
+          والسلامه.... تمتلك شركة{" "}
+          <span className="text-red-500">قوة الإطفاء</span> فريقاً من المهندسين
+          والفنيين المدربين والمؤهلين بشكل احترافي يعملون على الافا بالتزامنا
+          بتقديم خبرتنا لعملائنا في حماية الحياة والبيئة والممتلكات..
+        </DescriptionTxt>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <HeadingSection type="primary">About us</HeadingSection>
+        <DescriptionTxt type="primary">
+          <span className="text-red-500 uppercase">POWER OF</span> was
+          established in Jeddah - Saudi Arabia, and is among the leading
+          companies in Saudi Arabia that provide services and products for fire
+          protection systems, fire alarms, firefighting equipment and security
+          and safety engineering systems.{" "}
+          <span className="text-red-500 uppercase">POWER OF</span> has a team of
+          engineers and technicians, professionally trained and qualified,
+          working on our commitment to providing our expertise to our customers
+          in protecting life, the environment and property.
+        </DescriptionTxt>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <FooterSection />
+      </SectionContainer>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      {/* section Vision */}
+      <SectionContainer>
+        <HeadingSection txtDir="rtl" type="primary">
+          الرؤيه:
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="primary">
+          أن نكون شركة رائدة موثوقة في صناعة حماية الحياة والبيئة والممتلكات من
+          خلال تقديم منتجات وخدمات عالية الجودة مع المسؤولية الأخلاقية والالتزام
+          بالاحترافية.
+        </DescriptionTxt>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <HeadingSection txtDir="rtl" type="primary">
+          المهمه:
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="primary">
+          تمكين العملاء من تأمين الحياة والبيئة والممتلكات والأعمال من خلال
+          تقديم حلول ومعرفة حماية عالية الجودة ومبتكرة تحقيق رضا العملاء.
+        </DescriptionTxt>
+
+        <HeadingSection type="primary">Vision</HeadingSection>
+        <DescriptionTxt type="primary">
+          To be a trusted leader in the field of protecting life, environment
+          and property by providing high quality products and services with
+          ethical responsibility and commitment to professionalism.
+        </DescriptionTxt>
+
+        <HeadingSection type="primary">Mission</HeadingSection>
+        <DescriptionTxt type="primary">
+          Empowering customers to secure life, environment, property and
+          business by providing high quality and innovative protection solutions
+          and knowledge to achieve customer satisfaction
+        </DescriptionTxt>
+
+        <FooterSection />
+      </SectionContainer>
+
+      {/* section our core Values */}
+      <SectionContainer>
+        <div className="flex items-center justify-between ml-auto w-[60%] max-sm:w-[85%]">
+          <HeadingSection type="primary">Our Core Values</HeadingSection>
+          <HeadingSection type="primary" txtDir="rtl">
+            قيمنا الاساسيه :
+          </HeadingSection>
+        </div>
+
+        <HeadingSection txtDir="rtl" type="secondary">
+          نزاهه:
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="secondary">
+          نحن نظهر باستمرار أعلى المعايير الأخلاقية في أعمالنا، ونحترم
+          اتفاقياتنا ونكون صادقين في اتصالاتنا.
+        </DescriptionTxt>
+
+        <HeadingSection txtDir="rtl" type="secondary">
+          جوده:
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="secondary">
+          باستخدام نظام إدارة الجودة، فإننا نلتزم بالفحص الصارم لمنتجاتنا
+          وخدماتنا وسلاسل التوريد لدينا.
+        </DescriptionTxt>
+
+        <HeadingSection txtDir="rtl" type="secondary">
+          العمل بروح الفريق الواحد:
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="secondary">
+          العمل كفريق يعزز قوة كل فرد لضمان تحقيق أهداف الشركة.
+        </DescriptionTxt>
+
+        <HeadingSection type="secondary">Integrity.</HeadingSection>
+        <DescriptionTxt type="secondary">
+          We consistently demonstrate the highest ethical standards in our
+          business, honor our agreements and are honest in our communications.
+        </DescriptionTxt>
+
+        <HeadingSection type="secondary">Quality</HeadingSection>
+        <DescriptionTxt type="secondary">
+          Using a quality management services, we are committed to rigorously
+          inspecting our products, systems and supply chains.
+        </DescriptionTxt>
+
+        <HeadingSection type="secondary">Work as a team.</HeadingSection>
+        <DescriptionTxt type="secondary">
+          Working as a team leverages the strength of each individual to ensure
+          the company`&apos;`s goals are achieved..
+        </DescriptionTxt>
+
+        <FooterSection />
+      </SectionContainer>
+
+      {/*****/}
+      <SectionContainer>
+        <HeadingSection txtDir="rtl" type="secondary">
+          التزام:
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="secondary">
+          نحن نشترك في هدف واحد وهو الالتزام القوي بالجودة والتميز والتحسين
+          المستمر لحماية المزيد من الأرواح والأصول.
+        </DescriptionTxt>
+
+        <HeadingSection txtDir="rtl" type="secondary">
+          ابتكار:
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="secondary">
+          نحن نسعى باستمرار إلى إيجاد طرق مبتكرة لتعزيز منتجاتنا وخدماتنا وتوفير
+          القيمة لعملائنا.
+        </DescriptionTxt>
+
+        <HeadingSection txtDir="rtl" type="secondary">
+          التركيز على العملاء:
+        </HeadingSection>
+        <DescriptionTxt txtDir="rtl" type="secondary">
+          العميل هو جوهر عمل الشركة لذلك نتجاوز توقعات العملاء فيما يتعلق
+          بالقيمة والخدمة ونبني علاقات العملاء ونحافظ عليها ونضمن رضاهم على
+          المدى الطويل.
+        </DescriptionTxt>
+
+        <HeadingSection type="secondary">Commitment.</HeadingSection>
+        <DescriptionTxt type="secondary">
+          We share one goal, a strong commitment to quality, excellence and
+          continuous improvement to protect more lives and assets.
+        </DescriptionTxt>
+
+        <HeadingSection type="secondary">Innovation.</HeadingSection>
+        <DescriptionTxt type="secondary">
+          We constantly seek innovative ways to enhance our products and
+          services and provide value to our customers.
+        </DescriptionTxt>
+
+        <HeadingSection type="secondary">Customer Focus.</HeadingSection>
+        <DescriptionTxt type="secondary">
+          The customer is at the heart of the company`&apos;`s business, so we
+          exceed customer expectations for value and service, build and maintain
+          customer relationships and ensure long-term customer satisfaction.
+        </DescriptionTxt>
+
+        <FooterSection />
+      </SectionContainer>
+
+      {/* Section CEO message  */}
+      <SectionContainer>
+        <div className="relative h-72 bg-[url('/images/ceobackground.jpg')] bg-cover bg-center w-full">
+          {/* <Image src="/images/ceobackground.jpg" alt="CEO image" fill /> */}
+          <div className="absolute inset-0 bg-red-800 bg-opacity-85"></div>
+        </div>
+
+        <div className="grid grid-cols-[2fr_1fr] max-md:grid-cols-1 gap-4 mx-10 max-sm:mx-4 -mt-[152px]">
+          <div className=" h-fit py-2 px-1 z-10">
+            <div className="bg-gray-200">
+              <HeadingSection txtDir="rtl" type="secondary">
+                رساله المدير التنفيذى :
+              </HeadingSection>
+              <DescriptionTxt txtDir="rtl" type="secondary">
+                جعل بيئتكم أكثر أماناً هو أكثر من مجرد شعار، إنه أسلوب حياة قوة
+                الإطفاء، إن حمايتكم وحماية الممتلكات الخاصة بكم وجعلها آمنة هو
+                عملنا قوة الإطفاء معروفة كشركة رائدة في مجال السلامة من الحرائق،
+                بقيمنا الأساسية النزاهة والجودة والتزام والعمل بروح الفريق
+                الواحد، والابتكار، والتركيز على العملاء.
+              </DescriptionTxt>
+            </div>
+
+            <DescriptionTxt txtDir="rtl" type="secondary">
+              مع ثقتكم ودعمكم المتواصل لنا، فإن شركة قوة الإطفاء تسعى جاهدة
+              لتمكين عملائنا من تأمين الحياة والبيئة والممتلكات والأعمال من خلال
+              تقديم حلول ومعرفة حماية عالية الجودة ومبتكرة تحقيق رضا العملاء، من
+              خلال فريق عمل متوافق وفاعل لضمان تحقيق أهداف الشركة.
+            </DescriptionTxt>
+
+            <HeadingSection type="secondary">CEO Message</HeadingSection>
+            <DescriptionTxt type="secondary">
+              Making your environment safer is more than just a slogan, it is a
+              way of life for POWEROF, protecting you and your property and
+              making it safe is our job, POWEROF is known as a leader in fire
+              safety industry, with our core values of integrity, quality,
+              commitment, teamwork, and innovation. And customer focus. With
+              your trust and continued support for us, POWEROF strives to
+              empower our customers to secure life, environment, property and
+              business by providing high quality and innovative protection
+              solutions and knowledge to achieve customer satisfaction, through
+              a compatible and effective work team to achieve our company’s
+              mission.
+            </DescriptionTxt>
+          </div>
+
+          <div className="relative h-[30rem] w-full max-md:hidden">
+            <Image src="/images/ceo.jpg" alt="CEO image" fill />
+            <div class="absolute inset-0 bg-red-700 bg-opacity-70"></div>
+          </div>
+        </div>
+
+        <FooterSection />
+      </SectionContainer>
+
+      {/*******/}
+      <SectionContainer>
+        {/* <div className="relative h-screen">
+          <Image
+            fill
+            src="/images/safer.jpg"
+            className="h-screen object-cover"
+            alt="we make your environment safer"
+          />
+        </div> */}
+
+        <div className="relative h-[100dvh] object-cover">
+          <Image
+            src="/images/safer.jpg"
+            fill
+            alt="we make your environment safer"
+          />
+        </div>
+      </SectionContainer>
+
+      {/* Section Approvals  */}
+
+      {/* Section Brands  */}
+      {/* <div className="flex items-center justify-between ml-auto">
+        <HeadingSection type="primary">Brands</HeadingSection>
+        <HeadingSection type="primary" txtDir="rtl">
+          العلامات التجاريه :
+        </HeadingSection>
+      </div> */}
+
+      {/* Section Services  */}
+      <SectionContainer>
+        <div className="flex items-center justify-between ml-auto">
+          <HeadingSection type="primary">Services</HeadingSection>
+          <HeadingSection type="primary" txtDir="rtl">
+            الخدمات:
+          </HeadingSection>
+        </div>
+
+        <div className="mx-20 mt-12 flex flex-col gap-16 max-md:mx-10 max-sm:mx-4">
+          <ServiceItem margin="right">
+            <TextBoxService
+              type="primary"
+              headingArab="عقود الصيانه الدوريه الوقائيه"
+              headingEng="Periodic Preventive
+Maintenance Contracts"
+            />
+            <ImageServices src="/images/services1.jpg" />
+          </ServiceItem>
+
+          <ServiceItem margin="left">
+            <ImageServices src="/images/services2.jpg" />
+            <TextBoxService
+              type="primary"
+              headingArab="المشاريع والمقاولات"
+              headingEng="Projects and Contracting"
+            />
+          </ServiceItem>
+
+          <ServiceItem margin="right">
+            <TextBoxService
+              type="primary"
+              headingArab="الخدمات الهندسيه"
+              headingEng="Engineering Services"
+            />
+            <ImageServices src="/images/services3.jpg" />
+          </ServiceItem>
+        </div>
+
+        <FooterSection />
+      </SectionContainer>
+
+      {/* Products Section */}
+      <SectionContainer>
+        <div className="flex items-center justify-between ml-auto">
+          <HeadingSection type="primary">Products</HeadingSection>
+          <HeadingSection type="primary" txtDir="rtl">
+            المنتجات:
+          </HeadingSection>
+        </div>
+
+        <ProductsList />
+
+        <FooterSection />
+      </SectionContainer>
+
+      {/* Footer */}
+
+      <footer className="relative">
+        <div className="relative h-[100dvh] object-center bg-[url('/images/footer.jpg')] bg-cover bg-center w-full flex flex-col justify-end">
+          {/* <Image src="/images/footer.jpg" fill alt="footer picture" /> */}
+          <div className="absolute inset-0 bg-red-800 bg-opacity-85"></div>
+
+          <div className=" flex max-md:flex-col items-center max-md:items-start justify-between gap-1 max-md:gap-4 mx-28 max-xl:mx-12 max-lg:mx-4 mb-20 max-md:mb-2 z-10">
+            {/* address box */}
+            <div className="relative px-4  py-1 rounded-md bg-red-700 shadow-sm pr-10">
+              <p
+                dir="rtl"
+                className="text-white text-base max-lg:text-xs font-semibold"
+              >
+                Al-Madinah Al-Munawarah Rd 2368 طريق المدينه المنوره
+              </p>
+              <p
+                dir="rtl"
+                className="text-white text-base max-lg:text-xs font-semibold"
+              >
+                Hilal Ibn Umayyah Ash Sharafiyah هلال بن اميه - حى الشرقيه
+              </p>
+              <p
+                dir="rtl"
+                className="text-white text-base max-lg:text-xs font-semibold"
+              >
+                Dist. Second Floor Office Number 29 الطابق الثانى مكتب رقم
+              </p>
+
+              {/* icon */}
+              <div className="absolute top-[50%] right-0 translate-x-[50%] translate-y-[-50%] icon-footer flex items-center justify-center p-1 border border-white bg-yellow-500">
+                <CiGlobe className="w-5 h-5" color="white" />
+              </div>
+            </div>
+
+            <div className="relative px-4 py-1 rounded-md bg-red-700 shadow-sm pr-10">
+              <p className="text-white text-lg font-semibold max-lg:text-sm mb-2">
+                sales@powerof.sa
+              </p>
+              <p className="text-white text-lg font-semibold max-lg:text-sm">
+                www.powerof.sa
+              </p>
+
+              {/* icon */}
+              <div className="absolute top-[50%] right-0 translate-x-[50%] translate-y-[-50%] icon-footer flex items-center justify-center p-1 border border-white bg-yellow-500">
+                <IoLocationOutline className="w-5 h-5" color="white" />
+              </div>
+            </div>
+
+            <div className="relative px-4 py-1 rounded-md bg-red-700 shadow-sm pr-10">
+              <p className="text-white text-lg font-semibold mb-2 max-lg:text-sm">
+                050 991 60 60
+              </p>
+              <p className="text-white text-lg font-semibold max-lg:text-sm">
+                053 599 60 60
+              </p>
+
+              {/* icon */}
+              <div className="absolute top-[50%] right-0 translate-x-[50%] translate-y-[-50%] icon-footer flex items-center justify-center p-1 border border-white bg-yellow-500">
+                <LuPhoneCall className="w-5 h-5" color="white" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <CompanyNameHeading />
+
+        {/* <FooterAdresses>
+          <Adress
+            icon={
+              <IconFooter>
+                <IoLocationOutline />
+              </IconFooter>
+            }
+          >
+            <p dir="rtl" className="text-sm text-black mb-2">
+              المدينه المنوره طريق 2368 Al-Madinah Al-Munawarah Rd 2368
+            </p>
+            <p className="text-sm text-primary mb-2"></p>
+            <p className="text-sm text-primary mb-2"></p>
+          </Adress>
+          <Adress
+            icon={
+              <IconFooter>
+                <CiGlobe />
+              </IconFooter>
+            }
+          ></Adress>
+          <Adress
+            icon={
+              <IconFooter>
+                <LuPhoneCall />
+              </IconFooter>
+            }
+          ></Adress>
+        </FooterAdresses> */}
+      </footer>
+    </>
   );
 }
+
+export default Page;
